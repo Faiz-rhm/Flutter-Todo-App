@@ -1,9 +1,9 @@
 
 import 'package:get/get.dart';
-import 'package:todo_app/controller/add-task/AddTastBinding.dart';
-import 'package:todo_app/controller/home/HomeBinding.dart';
-import 'package:todo_app/screens/add-Task/AddTaskPage.dart';
-import 'package:todo_app/screens/home/HomePage.dart';
+import 'package:todo_app/controller/add-task/add_todo_binding.dart';
+import 'package:todo_app/controller/home/home_binding.dart';
+import 'package:todo_app/screens/add-Task/add_todo_page.dart';
+import 'package:todo_app/screens/home/home_page.dart';
 
 class Routes {
   static const INITIAL = '/home';
@@ -17,7 +17,7 @@ class Routes {
     GetPage(
       name: '/add-task',
       page: () => const AddTaskPage(),
-      binding: AddTaskBinding(),
+      binding: AddTodoBinding(),
       fullscreenDialog: true
     ),
   ];
