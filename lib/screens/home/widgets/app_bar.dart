@@ -3,7 +3,7 @@ import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:iconly/iconly.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:todo_app/controller/home/HomeController.dart';
+import 'package:todo_app/controller/home/home_controller.dart';
 import 'package:todo_app/shared/constants/Colors.dart';
 
 class AppBarWidget extends GetView<HomeController> {

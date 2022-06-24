@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:todo_app/controller/add-task/add_todo_conto.dart';
 import 'package:todo_app/shared/constants/Colors.dart';
 
-class AddTaskPage extends StatelessWidget {
+class AddTaskPage extends GetView<AddTodoController> {
   const AddTaskPage({ Key? key }) : super(key: key);
 
   @override
@@ -12,11 +13,11 @@ class AddTaskPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: ColorConstants.homeScaffoldBackgroundColor,
       body: Container(
-        padding: const EdgeInsets.only(top: 70, left: 16, right: 16),
+        padding: const EdgeInsets.only(top: 50, left: 16, right: 16),
         child: Stack(
           children: [
             Positioned(
-              top: 10,
+              top: 0,
               left: 0,
               right: 0,
               bottom: 0,
@@ -49,6 +50,7 @@ class AddTaskPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextField(
+                      controller: controller.todoController,
                       style: TextStyle(
                         fontSize: 30,
                         color: ColorConstants.textColor,
@@ -148,10 +150,10 @@ class AddTaskPage extends StatelessWidget {
       ),
       floatingActionButton: Container(
         padding: const EdgeInsets.only(right: 16),
-        height: 70,
+        height: 60,
         child: FloatingActionButton.extended(
           backgroundColor: ColorConstants.floatingButtonColor,
-          onPressed: (){},
+          onPressed: ()=> controller.addToDo(),
           label: Row(
             children: const [
               Text('New task', style: TextStyle(fontSize:18),),

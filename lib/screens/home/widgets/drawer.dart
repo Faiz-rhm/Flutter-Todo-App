@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:iconly/iconly.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:todo_app/controller/home/HomeController.dart';
+import 'package:todo_app/controller/home/home_controller.dart';
 import 'package:todo_app/shared/constants/Colors.dart';
 
 class DrawerWidget extends GetView<HomeController> {
@@ -18,7 +18,7 @@ class DrawerWidget extends GetView<HomeController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 60,),
+            const SizedBox(height: 50,),
             Container(
               padding: const EdgeInsets.only(right: 20),
               alignment: Alignment.topRight,
@@ -39,13 +39,25 @@ class DrawerWidget extends GetView<HomeController> {
                 ),
               ),
             ),
+            // TweenAnimationBuilder<double>(
+            //   tween: Tween<double>(begin: 0.0, end: 0.3),
+            //   duration: const Duration(milliseconds: 5000),
+            //   builder: (context, value, _) => CircularProgressIndicator(
+            //     value: value,
+            //     color: Colors.white,
+            //     backgroundColor: Colors.black,
+            //     valueColor:AlwaysStoppedAnimation<Color>(ColorConstants.iconDrawerColor),
+            //     semanticsLabel: 'Loading',
+            //     semanticsValue: 'Loading',
+            //   ),
+            // ),
             Container(
               width: 128.0,
               height: 128.0,
               margin: const EdgeInsets.only(
                 left: 65,
-                top: 24.0,
-                bottom:20.0,
+                top: 0.0,
+                bottom:10.0,
               ),
               padding: const EdgeInsets.all(5),
               clipBehavior: Clip.antiAlias,
@@ -71,19 +83,9 @@ class DrawerWidget extends GetView<HomeController> {
             const SizedBox(height: 10,),
             const Padding(
               padding: EdgeInsets.only(left: 65),
-              child: Text('Joy',
+              child: Text('Joy\nMitchell',
                 style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white
-                ),
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 65),
-              child: Text('Mitchell',
-                style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: Colors.white
                 ),
@@ -110,7 +112,10 @@ class DrawerWidget extends GetView<HomeController> {
               leading: const Icon(Iconsax.setting),
               title: const Text('Settings'),
             ),
-            const Spacer(),
+            // const Spacer(),
+            Container(
+
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 65),
               child: Text('Good',
