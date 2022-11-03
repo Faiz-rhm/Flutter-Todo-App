@@ -1,6 +1,6 @@
 # Flutter-Todo-App
 
-A sample app to showcase Crypto Wallet App UI demo in flutter.
+A sample app to showcase Todo App UI demo in flutter.
 
 
 ## Development Setup
